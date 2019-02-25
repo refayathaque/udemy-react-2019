@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const getTime = () => {
+  return (
+    new Date().toLocaleTimeString()
+  )
+}
+
+// Functional Component
 const App = () => {
-  const text = {text: 'Hi there!'}
+  const text = {text: 'Current Time:'}
   return (
     <div>
-      {text.text}
+      <div>{text.text}</div>
+      <h3>{getTime()}</h3>
     </div>
   )
 };
