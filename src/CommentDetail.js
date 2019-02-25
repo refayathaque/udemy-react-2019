@@ -2,7 +2,12 @@ import React from 'react';
 import faker from 'faker';
 
 // Functional Component
-const CommentDetail = () => {
+const CommentDetail = (props) => {
+
+  const pastDate = faker.date.past().toString()
+  const name = faker.name.firstName() + " " + faker.name.lastName()
+  const loremComment = faker.lorem.sentence()
+
   return (
     <div className="comment">
       <a href="/" className="avatar">
@@ -10,15 +15,15 @@ const CommentDetail = () => {
       </a>
       <div className="content">
         <a href="/" className="author">
-          Sam
+          {name}, "{props.authorNickname}"
         </a>
         <div className="metadata">
           <span className="date">
-            Today at 6:00PM
+            {pastDate}
           </span>
         </div>
         <div className="text">
-          Nice blog post!
+          {loremComment}, {props.comment}
         </div>
       </div>
     </div>
