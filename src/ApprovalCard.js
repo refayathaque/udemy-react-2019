@@ -15,7 +15,7 @@ const ApprovalCard = (props) => {
             Approve
           </div>
           <div className="ui basic red button">
-            Reject
+            Reject poop
           </div>
         </div>
       </div>
