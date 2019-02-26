@@ -9,9 +9,11 @@ const App = () => {
 
   return (
     <div className="ui container comments">
-      {/* Passing down an entire component as props, component passed down is child, and component receiving component as props is parent */}
+      {/* Passing down an entire component as props, component passed down is "child", and component receiving component as props is "parent" */}
+      {/* Parent component receives props as props.children */}
       <ApprovalCard>
         <CommentDetail authorNickname="Sam" authorNicknameBackwards="Mas" avatar={faker.image.avatar()} />
+        {/* Props above are called "Named Properties" */}
       </ApprovalCard>
       <ApprovalCard>
         <CommentDetail authorNickname="Alex" authorNicknameBackwards="Xela" avatar={faker.image.avatar()} />
@@ -24,6 +26,13 @@ const App = () => {
       </ApprovalCard>
       <ApprovalCard>
         <CommentDetail authorNickname="Dost" authorNicknameBackwards="Tsod" avatar={faker.image.avatar()} />
+      </ApprovalCard>
+      {/* Can also pass down other things as props this way, will be received by parent component as props.children */}
+      <ApprovalCard>
+        <div>
+          <h4>Warning</h4>
+          Are you sure you want to do this?
+        </div>
       </ApprovalCard>
     </div>
   );
