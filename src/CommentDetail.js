@@ -6,6 +6,7 @@ const CommentDetail = (props) => {
 
   // https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98fz
   const { authorNickname = "Josh", authorNicknameBackwards = "Hsoj", avatar } = props;
+  // Example of Default Props, used in the event that the expected props are not passed in by the parent component
 
   const pastDate = faker.date.past().toString();
   const name = faker.name.firstName() + " " + faker.name.lastName();

@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <div className="ui container comments">
-      {/* Passing down an entire component as props, component passed down is "child", and component receiving component as props is "parent" */}
+      {/* Passing down an entire component as props, component passed down is the "child", and component receiving the component as props is the "parent" */}
       {/* Parent component receives props as props.children */}
       <ApprovalCard>
         <CommentDetail authorNickname="Sam" authorNicknameBackwards="Mas" avatar={faker.image.avatar()} />
